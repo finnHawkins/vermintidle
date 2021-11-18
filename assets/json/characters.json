@@ -1,0 +1,137 @@
+[
+    {
+      "selected": false,
+      "cID": 1,
+      "cIcon": "kruber/Kruber_icon",
+      "cName": "Kroob",
+      "cLevel": 1,
+      "careers": [
+        {
+          "careerName": "mercenary",
+          "careerLogoSrc": "kruber/Portrait_kruber_mercenary",
+          "careerLevelReq": 1
+        },
+        {
+          "careerName": "huntsman",
+          "careerLogoSrc": "kruber/Portrait_kruber_huntsman",
+          "careerLevelReq": 7
+        },
+        {
+          "careerName": "foot knight",
+          "careerLogoSrc": "kruber/Portrait_kruber_footknight",
+          "careerLevelReq": 12
+        },
+        {
+          "careerName": "grail knight",
+          "careerLogoSrc": "kruber/Portrait_kruber_grailknight",
+          "careerLevelReq": 1
+        }
+      ]
+    },
+    {
+      "selected": false,
+      "cID": 2,
+      "cIcon": "bardin/Bardin_icon",
+      "cName": "Okri",
+      "cLevel": 1,
+      "careers": [
+        {
+          "careerName": "ranger veteran",
+          "careerLogoSrc": "bardin/Portrait_bardin_veteranranger",
+          "careerLevelReq": 1
+        },
+        {
+          "careerName": "ironbreaker",
+          "careerLogoSrc": "bardin/Portrait_bardin_ironbreaker",
+          "careerLevelReq": 7
+        },
+        {
+          "careerName": "slayer",
+          "careerLogoSrc": "bardin/Portrait_bardin_slayer",
+          "careerLevelReq": 12
+        },
+        {
+          "careerName": "outcast engineer",
+          "careerLogoSrc": "bardin/Portrait_bardin_outcastengineer",
+          "careerLevelReq": 1
+        }
+      ]
+    },
+    {
+      "selected": false,
+      "cID": 3,
+      "cIcon": "kerillian/Kerillian_icon",
+      "cName": "Elenaril",
+      "cLevel": 1,
+      "careers": [
+        {
+          "careerName": "waystalker",
+          "careerLogoSrc": "kerillian/Portrait_kerillian_waystalker",
+          "careerLevelReq": 1
+        },
+        {
+          "careerName": "handmaiden",
+          "careerLogoSrc": "kerillian/Portrait_kerillian_handmaiden",
+          "careerLevelReq": 7
+        },
+        {
+          "careerName": "shade",
+          "careerLogoSrc": "kerillian/Portrait_kerillian_shade",
+          "careerLevelReq": 12
+        },
+        {
+          "careerName": "sister of the thorn",
+          "careerLogoSrc": "kerillian/Portrait_SisterOfTheThorn",
+          "careerLevelReq": 1
+        }
+      ]
+    },
+    {
+      "selected": false,
+      "cID": 4,
+      "cIcon": "saltzpyre/Saltzpyre_icon",
+      "cName": "Margis",
+      "cLevel": 1,
+      "careers": [
+        {
+          "careerName": "witch hunter captain",
+          "careerLogoSrc": "saltzpyre/Portrait_saltzpyre_witchhuntercaptain",
+          "careerLevelReq": 1
+        },
+        {
+          "careerName": "bounty hunter",
+          "careerLogoSrc": "saltzpyre/Portrait_saltzpyre_bountyhunter",
+          "careerLevelReq": 7
+        },
+        {
+          "careerName": "zealot",
+          "careerLogoSrc": "saltzpyre/Portrait_saltzpyre_zealot",
+          "careerLevelReq": 12
+        }
+      ]
+    },
+    {
+      "selected": false,
+      "cID": 5,
+      "cIcon": "sienna/Sienna_icon",
+      "cName": "Brimfyre",
+      "cLevel": 1,
+      "careers": [
+        {
+          "careerName": "battle wizard",
+          "careerLogoSrc": "sienna/Portrait_sienna_battlewizard",
+          "careerLevelReq": 1
+        },
+        {
+          "careerName": "pyromancer",
+          "careerLogoSrc": "sienna/Portrait_sienna_pyromancer",
+          "careerLevelReq": 7
+        },
+        {
+          "careerName": "unchained",
+          "careerLogoSrc": "sienna/Portrait_sienna_unchained",
+          "careerLevelReq": 12
+        }
+      ]
+    }
+]
