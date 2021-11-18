@@ -1,7 +1,9 @@
 <template>
     <div class="modal">
-      <div class="characterSelector">
-        <characterDisplay v-for="character in characters" :key="character" v-bind="character" v-on:click.native="toggleCareers(character)" />
+      <div class="characterSelectorContainer">
+        <div class="characterSelector">
+          <characterDisplay v-for="character in characters" :key="character" v-bind="character" v-on:click.native="toggleCareers(character)" />
+        </div>
       </div>
     </div>
 </template>

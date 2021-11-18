@@ -12,9 +12,9 @@ export default {
   data() {
 
     return {
-      displayCharacterSelector: false,
+      displayCharacterSelector: true,
       displaySettings: false,
-      displaySaves: true,
+      displaySaves: false,
       displayInventory: false,
 
     }
