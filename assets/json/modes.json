@@ -1,0 +1,20 @@
+[
+    {
+        "mID": 1,
+        "mName": "Horde Mode",
+        "mIcon": "",
+        "mDesc": "Slap rats for as long as you can! Wave based, minimal xp gains but very afk"
+    },
+    {
+        "mID": 2,
+        "mName": "Campaign Mode",
+        "mIcon": "",
+        "mDesc": "Play through the campaign! Linear progression, mostly afk (depending on settings), regular xp"
+    },
+    {
+        "mID": 1,
+        "mName": "Journey to the Madlands",
+        "mIcon": "",
+        "mDesc": "A (slightly) different experience every time! Multiple levels with different modifiers, some of which you choose. Not afk, regular xp"
+    }
+]
