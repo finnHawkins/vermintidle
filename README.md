@@ -1,4 +1,20 @@
 # vermintidle
+It's in the name babeyy
+
+## Emoji guide to commits
+| Emoji          |Meaning                        |
+|----------------|-------------------------------|
+|:honeybee:		 | Fixed a bug!            |
+|:gift_heart:	 | Added a new feature!            |
+|:runner:        | Made a change to characters |
+|:art:        | Made a change to the assets|
+|:wrench:        | Made a change to the mechanics|
+|:pencil2:        | Made a change to the UI|
+|:video_game:        | Made a change to the game types|
+|:fire:        | My code is a dumpster fire|
+
+
+
 
 ## Build Setup
 
