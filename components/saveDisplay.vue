@@ -97,8 +97,6 @@ export default {
             const fileName = this.characters[this.characterID].careers[this.careerID].careerLogoSrc;
             return require('~/assets/imgs/characters/' + fileName + '.png');
 
-
-
         }
 
     }

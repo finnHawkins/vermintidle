@@ -1,3 +1,11 @@
+$darkestGreen: #003F00
+$darkGreen: #2E7320
+$lightGreen: #8CBF0A
+$lightestGreen: #A0CF0A
+$darkGrey: #555
+$lightGrey: #AAA
+    
+    
 html, body
     //background-color: #1c2e4a
     font-family: 'Space Mono', monospace
@@ -5,7 +13,7 @@ html, body
     width: 100vw
     height: 100%
     height: 100vh
-    background-color: #003b1b
+    background-color: $darkestGreen
     margin: 0
 
     .mainScreen
@@ -20,8 +28,8 @@ html, body
             bottom: 0
             z-index: 999
             display: flex
-            background-color: rgb(54, 69, 79) /* fallback */
-            background-color: rgba(54, 69, 79, .7)
+            background-color: $lightGrey /* fallback */
+            background-color: rgba(170, 170, 170, .7)
             justify-content: center
             align-items: center
         
@@ -40,67 +48,104 @@ html, body
                     position: relative
                     width: 100%
                     height: 100%
-
-                    .character
-                        background-color: #003b1b
-                        border: 1px solid white
-                        border-radius: 6px
-                        color: white
-                        padding: 10px 0
-                        font-weight: 900
-                        letter-spacing: 2px
+                    
+                    .characterList
+                        position: relative
                         width: 100%
-                        display: inline-flex
-                        margin: 3px 0
+                        height: 30%
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        margin-bottom: 20px
 
-                        .characterInfo
-                            width: 15%
-                            position: relative
+                        .character
+                            color: white
+                            padding: 10px 0
+                            font-weight: 900
+                            letter-spacing: 2px
+                            width: 20%
                             display: flex
-                            align-items: center
                             justify-content: center
+                            align-items: center
+                            height: 100%
 
-                            .characterLevel
-                                width: 25%
-                                position: absolute
-                                top: 0
-                                left: 0
-                                bottom: 0
+                            .characterInfo
+                                background-color: #111c2c
+                                border: 1px solid white
+                                width: 90%
+                                border-radius: 6px
+                                position: relative
                                 display: flex
                                 align-items: center
                                 justify-content: center
+                                height: 100%
 
-                            .characterDetails
-                                text-align: center
-                                width: 75%
-                                position: absolute
-                                top: 0
-                                right: 0
-                                bottom: 0
-                                
-                                .characterPortrait
+                                &:hover
+                                    background-color: #16253b
 
-                                    img
-                                        width: 50px
-                                        height: 50px
-                        
-                        .characterCareers
-                            width: 85%
-
-                            .characterCareer
-                                display: inline-flex
-                                width: 25%
-                                text-align: center
-
-                                .careerDetails
+                                .characterDetails
+                                    text-align: center
                                     width: 100%
+                                    
+                                    .characterPortrait
 
-                                    p
-                                        margin: 2px
+                                        img
+                                            width: 50px
+                                            height: 50px
+                            
+                    .characterCareers
+                        position: relative
+                        width: 100%
+                        border: 1px solid white
+                        background-color: #49586e
+                        border-radius: 6px
 
-                                    img
-                                        width: 40px
-                                        height: 50px
+                        .characterCareer
+                            display: inline-flex
+                            width: 25%
+                            text-align: center
+                            padding: 6px 0
+                            // text-transform: uppercase
+                            letter-spacing: 1px
+
+                            &:hover
+                                background-color: #33435c
+
+                            .careerDetails
+                                width: 100%
+
+                                p
+                                    margin: 2px
+
+                                img
+                                    width: 40px
+                                    height: 50px
+                    
+                    .buttonContainer
+                        padding: 10px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+
+                        .buttonBannerContainer
+                            width: 100%
+
+                            button
+                                background-color: fff
+                                border: 1px solid black
+                                font-size: 20px
+                                color: #1c2e4a
+                                border-radius: 6px
+                                padding: 5px
+                                margin: 0 40%
+                                width: 20%
+                            
+                            .infoBanner
+                                padding: 10px
+                                text-align: center
+                                color: white
+                                font-weight: 900
+                                letter-spacing: 2px
 
             .saveSelectorContainer
                 position: relative

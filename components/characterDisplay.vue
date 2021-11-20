@@ -1,19 +1,11 @@
 <template>
     <div class="character">
-        <div class="characterInfo">
-            <div class="characterLevel">{{ cLevel }}</div>
+        <div class="characterInfo" v-bind:style="selected  ? 'background-color: #192943' : '' ">
             <div class="characterDetails">
                 <div class="characterPortrait"><img :src="getImgSrc(cIcon)"></div>
                 <div class="characterText">
+                    <div class="characterLevel">{{ cLevel }}</div>
                     <div class="characterName">{{ cName }}</div>
-                </div>
-            </div>
-        </div>
-        <div class="characterCareers">
-            <div v-for="career in careers" :key="career.careerName" class="characterCareer">
-                <div class="careerDetails">
-                    <img :src="getImgSrc(career.careerLogoSrc)">
-                    <p v-bind:style="cLevel >= career.careerLevelReq ? 'color: white' : 'color: black' ">{{ career.careerName}}</p>
                 </div>
             </div>
         </div>
