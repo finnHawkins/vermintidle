@@ -3,18 +3,18 @@
         <div class="modeSelectorContainer">
             <div class="modeSelector">
                 <div class="modeList">
-                    <div class="mode" v-for="mode in modes" :key="mode.mName">
+                    <div class="mode" v-for="mode in modes" :key="mode.mName" v-on:click="getModeID(mode)" v-bind:style="selectedModeID == mode.mID  ? 'background-color: #192943' : ''">
                         <div class="modeImg">
                         </div>
                         <div class="modeData">
-                            <p> {{ mode.mName }}</p>
-                            <p> {{ mode.mDesc }} </p>
+                            <p class="modeName"> {{ mode.mName }}</p>
+                            <p class="modeDesc"> {{ mode.mDesc }} </p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="modeBtnContainer">
-                <button>Select</button>
+                <div class="modeBtnContainer">
+                    <button :disabled="disableButton()" v-on:click="emitMode()">Select</button>
+                </div>
             </div>
         </div>
     </div>
@@ -31,9 +31,44 @@ export default {
         return {
 
             modes: modeData,
+            selectedModeID: 0
 
         }
 
+    },
+
+    methods: {
+
+        getModeID(mode) {
+
+            this.selectedModeID = mode.mID;
+
+        },
+
+        disableButton() {
+
+            let disabled = true;
+
+            //if both a character and a career have been selected
+            //ensure the career is available to the player
+            if(this.selectedModeID === 0) {
+                disabled = true;
+            } else {
+                
+                disabled = false;
+            }
+
+            return disabled;
+
+        },
+
+        emitMode() {
+
+            this.$emit('confirmMode', {
+                modeID: this.selectedModeID
+            });
+
+        }
     }
     
 }

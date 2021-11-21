@@ -2,7 +2,7 @@
   <div class="mainScreen">
     <saveModal v-if="currentDisplay === 1" />
     <characterModal v-if="currentDisplay === 2" @confirmCharacter="onCharacterConfirmation" />
-    <modeModal v-if="currentDisplay === 3" />
+    <modeModal v-if="currentDisplay === 3" @confirmMode="onModeConfirmation" />
     <settingsModal v-if="displaySettings" />
     <statsModal v-if="displayStats" />
 
@@ -55,6 +55,12 @@ export default {
 
     },
 
+    onModeConfirmation({modeID}) {
+
+      console.log(modeID);
+      this.currentDisplay = 4;
+
+    }
 
 
 
