@@ -3,7 +3,7 @@
         <div class="modeSelectorContainer">
             <div class="modeSelector">
                 <div class="modeList">
-                    <div class="mode" v-for="mode in modes" :key="mode.mName" v-on:click="getModeID(mode)" v-bind:style="selectedModeID == mode.mID  ? 'background-color: #192943' : ''">
+                    <div class="mode" v-for="mode in modes" :key="mode.mName" @click="getModeID(mode)" v-bind:style="selectedModeID == mode.mID  ? 'background-color: #192943' : ''">
                         <div class="modeImg">
                         </div>
                         <div class="modeData">
@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 <div class="modeBtnContainer">
-                    <button :disabled="disableButton()" v-on:click="emitMode()">Select</button>
+                    <button :disabled="disableButton()" @click="emitMode()">Select</button>
                 </div>
             </div>
         </div>

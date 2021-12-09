@@ -4,134 +4,308 @@ $lightGreen: #8CBF0A
 $lightestGreen: #A0CF0A
 $darkGrey: #555
 $lightGrey: #AAA
-    
-    
+$blue: #1c2e4a
+$blueTintDark: #16253b
+$blueTintDarkest: #111c2c
+$blueTintPale: #33435c
+$blueTintPalest: #49586e
+$red: #800000
+$purple: #800080
+
 html, body
-    //background-color: #1c2e4a
+    background-color: $blue
     font-family: 'Space Mono', monospace
     width: 100%
     width: 100vw
     height: 100%
     height: 100vh
-    background-color: $darkestGreen
     margin: 0
 
-    .mainScreen
+    #__nuxt
         width: 100%
         height: 100%
+        margin: 0
 
-        .modal
-            position: fixed
-            top: 0
-            left: 0
-            right: 0
-            bottom: 0
-            z-index: 999
-            display: flex
-            background-color: $lightGrey /* fallback */
-            background-color: rgba(170, 170, 170, .7)
-            justify-content: center
-            align-items: center
-        
-            .characterSelectorContainer
+        #__layout
+            width: 100%
+            height: 100%
+            margin: 0
+
+            .mainScreen
+                width: 100%
+                height: 100%
                 position: relative
-                width: 75%
-                display: flex
-                align-items: center
-                justify-content: center
-                height: 60%
-                padding: 10px
-                background-color: #1c2e4a
-                border-radius: 6px
+                margin: 0
 
-                .characterSelector
-                    position: relative
-                    width: 100%
-                    height: 100%
-                    
-                    .characterList
+                .modal
+                    position: fixed
+                    top: 0
+                    left: 0
+                    right: 0
+                    bottom: 0
+                    z-index: 999
+                    display: flex
+                    background-color: $lightGrey /* fallback */
+                    background-color: rgba(170, 170, 170, .7)
+                    justify-content: center
+                    align-items: center
+                
+                    .characterSelectorContainer
                         position: relative
-                        width: 100%
-                        height: 30%
+                        width: 75%
                         display: flex
-                        justify-content: center
                         align-items: center
-                        margin-bottom: 20px
+                        justify-content: center
+                        height: 60%
+                        padding: 10px
+                        background-color: #1c2e4a
+                        border-radius: 6px
 
-                        .character
-                            color: white
-                            padding: 10px 0
-                            font-weight: 900
-                            letter-spacing: 2px
-                            width: 20%
-                            display: flex
-                            justify-content: center
-                            align-items: center
+                        .characterSelector
+                            position: relative
+                            width: 100%
                             height: 100%
-
-                            .characterInfo
-                                background-color: #111c2c
-                                border: 1px solid white
-                                width: 90%
-                                border-radius: 6px
+                            
+                            .characterList
                                 position: relative
+                                width: 100%
+                                height: 30%
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                margin-bottom: 20px
+
+                                .character
+                                    color: white
+                                    padding: 10px 0
+                                    font-weight: 900
+                                    letter-spacing: 2px
+                                    width: 20%
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    height: 100%
+
+                                    .characterInfo
+                                        background-color: $blueTintDarkest
+                                        border: 1px solid white
+                                        width: 90%
+                                        border-radius: 6px
+                                        position: relative
+                                        display: flex
+                                        align-items: center
+                                        justify-content: center
+                                        height: 100%
+
+                                        &:hover
+                                            background-color: $blueTintDark
+
+                                        .characterDetails
+                                            text-align: center
+                                            width: 100%
+                                            
+                                            .characterPortrait
+
+                                                img
+                                                    width: 50px
+                                                    height: 50px
+                                    
+                            .characterCareers
+                                position: relative
+                                width: 100%
+                                border: 1px solid white
+                                background-color: $blueTintPalest
+                                border-radius: 6px
+
+                                .characterCareer
+                                    display: inline-flex
+                                    width: 25%
+                                    text-align: center
+                                    padding: 6px 0
+                                    // text-transform: uppercase
+                                    letter-spacing: 1px
+
+                                    &:hover
+                                        background-color: $blueTintPale
+
+                                    .careerDetails
+                                        width: 100%
+
+                                        p
+                                            margin: 2px
+
+                                        img
+                                            width: 40px
+                                            height: 50px
+                            
+                            .buttonContainer
+                                padding: 10px
                                 display: flex
                                 align-items: center
                                 justify-content: center
-                                height: 100%
 
-                                &:hover
-                                    background-color: #16253b
-
-                                .characterDetails
-                                    text-align: center
+                                .buttonBannerContainer
                                     width: 100%
+
+                                    button
+                                        background-color: #fff
+                                        border: 1px solid black
+                                        font-size: 20px
+                                        color: #1c2e4a
+                                        border-radius: 6px
+                                        padding: 5px
+                                        margin: 0 40%
+                                        width: 20%
+                                        font-family: 'Space Mono', monospace
+                                        letter-spacing: 2px
+
                                     
-                                    .characterPortrait
+                                    .infoBanner
+                                        padding: 10px
+                                        text-align: center
+                                        color: white
+                                        font-weight: 900
+                                        letter-spacing: 2px
 
-                                        img
-                                            width: 50px
-                                            height: 50px
-                            
-                    .characterCareers
+                    .saveSelectorContainer
                         position: relative
-                        width: 100%
-                        border: 1px solid white
-                        background-color: #49586e
-                        border-radius: 6px
-
-                        .characterCareer
-                            display: inline-flex
-                            width: 25%
-                            text-align: center
-                            padding: 6px 0
-                            // text-transform: uppercase
-                            letter-spacing: 1px
-
-                            &:hover
-                                background-color: #33435c
-
-                            .careerDetails
-                                width: 100%
-
-                                p
-                                    margin: 2px
-
-                                img
-                                    width: 40px
-                                    height: 50px
-                    
-                    .buttonContainer
-                        padding: 10px
+                        width: 50%
                         display: flex
                         align-items: center
                         justify-content: center
+                        height: 50%
+                        padding: 10px
+                        background-color: #1c2e4a
+                        border-radius: 6px
 
-                        .buttonBannerContainer
+                        .saveSelector
+                            height: 100%
                             width: 100%
+                            display: flex
+                            align-items: center
+                            justify-content: center
+
+                            .saveContainer
+                                width: 33.333%
+                                height: 100%
+                                display: flex
+                                align-items: center
+                                justify-content: center
+                                color: white
+                                font-weight: 900
+                                letter-spacing: 2px                        
+
+                                .saveDetails
+                                    margin: 0 10px
+                                    border: 1px solid white
+                                    height: 95%
+                                    width: 100%
+                                    border-radius: 6px
+                                    display: flex
+                                    align-items: center
+                                    justify-content: center
+
+                    .settingsDisplayContainer
+                        position: relative
+                        width: 90%
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        height: 90%
+                        padding: 10px
+                        background-color: #1c2e4a
+                        border-radius: 6px
+
+                        .settingsContainer
+
+                            .settingsList
+
+                                .setting
+
+                                    input[type=checkbox]
+                                        height: 0
+                                        width: 0
+                                        visibility: hidden
+                                    
+
+                                    label
+                                        cursor: pointer
+                                        text-indent: -9999px
+                                        width: 200px
+                                        height: 100px
+                                        background: grey
+                                        display: block
+                                        border-radius: 100px
+                                        position: relative
+                                    
+
+                                    label:after 
+                                        content: ''
+                                        position: absolute
+                                        top: 5px
+                                        left: 5px
+                                        width: 90px
+                                        height: 90px
+                                        background: #fff
+                                        border-radius: 90px
+                                        transition: 0.3s
+                                    
+
+                                    input:checked + label
+                                        background: #bada55
+                                    
+
+                                    input:checked + label:after
+                                        left: calc(100% - 5px)
+                                        transform: translateX(-100%)
+                                    
+
+                                    label:active:after
+                                        width: 130px
+
+                    .modeSelectorContainer
+                        position: relative
+                        width: 50%
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        height: 50%
+                        padding: 10px
+                        background-color: #1c2e4a
+                        border-radius: 6px
+                        color: white
+
+                        .modeSelector
+
+                            .modeList
+
+                                .mode
+                                    border: 1px solid white
+                                    border-radius: 6px
+                                    margin: 10px 0
+                                    padding: 0 10px
+
+                                    &:hover
+                                        background-color: $blueTintDark
+
+                                    .modeImg
+
+                                    .modeData
+
+                                        .modeName
+                                            font-weight: 900
+                                            letter-spacing: 2px
+
+                                        .modeDesc
+                                            letter-spacing: 1px
+                        
+                        .modeBtnContainer
+                            display: flex
+                            align-items: center
+                            justify-content: center
 
                             button
-                                background-color: fff
+                                background-color: #fff
                                 border: 1px solid black
                                 font-size: 20px
                                 color: #1c2e4a
@@ -139,157 +313,233 @@ html, body
                                 padding: 5px
                                 margin: 0 40%
                                 width: 20%
-                            
-                            .infoBanner
-                                padding: 10px
-                                text-align: center
-                                color: white
-                                font-weight: 900
+                                font-family: 'Space Mono', monospace
                                 letter-spacing: 2px
 
-            .saveSelectorContainer
-                position: relative
-                width: 50%
-                display: flex
-                align-items: center
-                justify-content: center
-                height: 50%
-                padding: 10px
-                background-color: #1c2e4a
-                border-radius: 6px
-
-                .saveSelector
-                    height: 100%
+                main
                     width: 100%
+                    height: 100%
+                    margin: 0
+                    padding: 0
                     display: flex
-                    align-items: center
-                    justify-content: center
 
-                    .saveContainer
-                        width: 33.333%
+                    nav
+                        margin: 0
+                        padding: 0
                         height: 100%
-                        display: flex
-                        align-items: center
-                        justify-content: center
-                        color: white
-                        font-weight: 900
-                        letter-spacing: 2px                        
+                        width: 10%
+                        background: $blueTintDark
 
-                        .saveDetails
-                            margin: 0 10px
-                            border: 1px solid white
-                            height: 95%
+                        button
+                            display: block
+                            margin: 5px 0
                             width: 100%
+                            height: 50px
+                            background-color: white
+                            color: navy
+                            font-family: 'Space Mono', monospace
+                            letter-spacing: 2px
+                            border: 1px solid black
+                            border-radius: 6px
+
+                    .gameScreen
+                        margin: 0
+                        width: 90%
+                        padding: 5px
+
+                        .progressContainer
+                            width: 100%
+                            background-color: $blueTintDark
+                            height: 10%
                             border-radius: 6px
                             display: flex
-                            align-items: center
-                            justify-content: center
 
-            .settingsDisplayContainer
-                position: relative
-                width: 90%
-                display: flex
-                align-items: center
-                justify-content: center
-                height: 90%
-                padding: 10px
-                background-color: #1c2e4a
-                border-radius: 6px
+                            .progressStats
+                                width: 80%
 
-                .settingsContainer
+                                .progressBarContainer
+                                    width: 100%
+                                    height: 50%
+                                    padding: 5px
 
-                    .settingsList
+                                    .progressBar
+                                        width: calc(100% - 12px)
+                                        border: 1px solid black
+                                        border-radius: 20px
+                                        height: 100%
+                                        background-color: $lightGrey
+                                        overflow: hidden
 
-                        .setting
+                                        #progressCompleted
+                                            background-color: $lightGreen
+                                            width: 50%
+                                            height: 100%
 
-                            input[type=checkbox]
-                                height: 0
-                                width: 0
-                                visibility: hidden
-                            
+                                .statsContainer
+                                    display: flex
+                                    align-items: center
+                                    justify-content: center
+                                    div
+                                        padding: 5px
+                                        letter-spacing: 2px
+                                        color: white
 
-                            label
-                                cursor: pointer
-                                text-indent: -9999px
-                                width: 200px
-                                height: 100px
-                                background: grey
-                                display: block
-                                border-radius: 100px
-                                position: relative
-                            
+                            .toggleOptionsContainer
+                                width: 20%
+                                height: calc(100% - 20px)
+                                background-color: $darkGrey
+                                border-radius: 6px
+                                margin: 5px
+                                padding: 5px
+                                display: flex
+                                align-items: right
+                                flex-direction: column
+                                
+                                div
+                                    input[type="checkbox"]
 
-                            label:after 
-                                content: ''
-                                position: absolute
-                                top: 5px
-                                left: 5px
-                                width: 90px
-                                height: 90px
-                                background: #fff
-                                border-radius: 90px
-                                transition: 0.3s
-                            
-
-                            input:checked + label
-                                background: #bada55
-                            
-
-                            input:checked + label:after
-                                left: calc(100% - 5px)
-                                transform: translateX(-100%)
-                            
-
-                            label:active:after
-                                width: 130px
-
-            .modeSelectorContainer
-                position: relative
-                width: 50%
-                display: flex
-                align-items: center
-                justify-content: center
-                height: 50%
-                padding: 10px
-                background-color: #1c2e4a
-                border-radius: 6px
-                color: white
-
-                .modeSelector
-
-                    .modeList
-
-                        .mode
-                            border: 1px solid white
+                        .enemiesContainer
+                            height: calc(40% - 20px)
+                            display: flex
+                            background-color: $blueTintDark
                             border-radius: 6px
+                            overflow: hidden
                             margin: 10px 0
-                            padding: 0 10px
 
-                            &:hover
-                                background-color: #16253b
+                            .enemyContainer
+                                .enemyName
+                                .enemyImgContainer
+                                .enemyHealthbar
+                                    #enemyHealthText
+                                    #enemyAvailableHealth
+                                    #enemyLostHealth
 
-                            .modeImg
+                        .playerContainer
+                            height: 50%
+                            width: 100%
+                            background-color: $blueTintDark
+                            border-radius: 6px
 
-                            .modeData
+                            .controlButtonsContainer
+                                width: 100%
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                height: 10%
 
-                                .modeName
-                                    font-weight: 900
-                                    letter-spacing: 2px
+                                span
+                                    width: calc(100% / 3)
+                                    height: 100%
+                                    display: flex
+                                    align-items: center
+                                    justify-content: center
 
-                                .modeDesc
-                                    letter-spacing: 1px
-                
-                .modeBtnContainer
-                    display: flex
-                    align-items: center
-                    justify-content: center
+                                    button
+                                        width: calc(100% - 10px)
+                                        height: calc(100% - 10px)
+                                        background-color: white
+                                        color: $blue
+                                        font-family: 'Space Mono', monospace
+                                        letter-spacing: 2px
+                                        border: 1px solid black
+                                        border-radius: 6px
 
-                    button
-                        background-color: fff
-                        border: 1px solid black
-                        font-size: 20px
-                        color: #1c2e4a
-                        border-radius: 6px
-                        padding: 5px
-                        margin: 0 40%
-                        width: 20%
+                            .playerStatsContainer
+                                display: flex
+                                flex-direction: column
+                                width: 100%
+                                height: 90%
+                                border-radius: 6px
+                                overflow: hidden
+                                
+                                .playerInfo
+                                    width: 100%
+                                    height: 80%
+                                    display: flex
+                                    .playerImage
+                                        height: 100%
+                                        width: 20%
+                                        background-color: $blueTintDarkest
+
+                                    .playerLoadoutContainer
+                                        height: 100%
+                                        width: 40%
+                                        background-color: $blueTintDark
+                                        display: flex
+                                        flex-direction: column
+
+                                        div
+                                            height: 50%
+                                            width: 100%
+                                            display: flex
+                                        
+                                        .loadout
+
+                                            div
+                                                margin: 5px
+                                                height: 50px
+                                                width: 50px
+                                                border: 1px solid gold
+
+                                        .blockContainer
+
+                                            .blockIcon
+                                                margin: 5px
+                                                height: 50px
+                                                width: 50px
+                                                border: 1px solid gold
+
+                                    .playerBuffsContainer
+                                        height: 100%
+                                        width: 40%
+                                        background-color: $blueTintDark
+                                        display: flex
+
+                                        div
+                                            margin: 5px
+                                            height: 50px
+                                            width: 50px
+                                            border: 1px solid gold
+                                .playerBars
+                                    width: 100%
+                                    height: 20%
+                                    background-color: $blueTintDarkest
+                                    
+                                    .playerHealthBar, .specBar  
+                                        height: 40%
+                                        border: 1px solid black
+                                        width: 100%
+                                        border-radius: 6px
+                                        display: flex
+                                        overflow: hidden
+                                        margin: 5px 0
+
+                                        span
+                                            height: 100%
+                                            display: inline-block
+
+                                    .playerHealthbar
+                                        #healthText
+                                            position: absolute
+                                            top: 0
+                                            left: 50%
+                                            z-index: 99
+                                            width: 50px
+
+                                        #availableHealth
+                                            background-color: green
+                                            width: 100%
+
+                                        #lostHealth
+                                            background-color: gray
+                                        #grimoireHealth
+                                            background-color: red
+
+                                    .specBar
+
+                                        #specFull
+                                            background-color: $purple
+                                            width: 100%
+
+                                        #specEmpty
+                                            background-color: $lightGrey

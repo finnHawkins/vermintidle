@@ -3,7 +3,7 @@
       <div class="characterSelectorContainer">
         <div class="characterSelector">
           <div class="characterList">
-            <characterDisplay v-for="character in characters" :key="character" v-bind="character" v-on:click.native="toggleCareers(character)" />
+            <characterDisplay v-for="character in characters" :key="character" v-bind="character" @click.native="toggleCareers(character)" />
           </div>
           <div class="characterCareers" v-if="selectedCharacterID != 0">
             <div v-for="career in characters[selectedCharacterID -1].careers" :key="career.careerID" class="characterCareer" v-on:click="getCareerID(career)" v-bind:style="selectedCareerID == career.careerID  ? 'background-color: #192943' : ''">
@@ -15,7 +15,7 @@
           </div>
           <div class="buttonContainer">
             <div class="buttonBannerContainer">
-              <button :disabled="disableButton()" v-on:click="emitCharacter()">Confirm</button>
+              <button :disabled="disableButton()" @click="emitCharacter()">Confirm</button>
               <div class="infoBanner" v-if="disableButton() && selectedCareerID > 0">You need to level up this character more before you can play this class!</div>
             </div>
           </div>
